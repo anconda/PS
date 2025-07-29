@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - STDC</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" type="image/x-icon" href="images/Green and Beige Classic Elegant Nature Foundation Logo.png">
+</head>
+<body>
+  <header>
+    <h1>STDC</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="what-is-deforestation.html">What is Deforestation?</a></li>
+        <li><a href="causes.html">Causes</a></li>
+        <li><a href="effects.html">Effects</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="how-you-can-help.html">How You Can Help</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content">
+      <h2>📞 Contact Us</h2>
+      <p>We'd love to hear from you! Whether you have a question, want to collaborate, or just want to share your thoughts on deforestation — feel free to reach out. Your voice matters in our mission to protect the world's forests.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+        <div>
+          <h3>📧 Email</h3>
+          <p><a href="mailto:STDC@gmail.com">STDC@gmail.com</a></p>
+          
+          <h3>🌍 Get Involved</h3>
+          <p>Join our community of forest protectors and stay updated with the latest news, events, and opportunities to make a difference.</p>
+          
+          <h3>📱 Follow Us</h3>
+          <div class="social-links" style="justify-content: flex-start; margin-top: 1rem;">
+            <a href="#" style="background: #E4405F;">Instagram</a>
+            <a href="#" style="background: #1877F2;">Facebook</a>
+            <a href="#" style="background: #1DA1F2;">Twitter</a>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>💬 Send us a Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject">
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell us how you'd like to help or what questions you have about deforestation..."></textarea>
+            </div>
+            
+            <button type="submit" class="cta-button" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <div style="background: rgba(90, 119, 57, 0.1); padding: 2rem; border-radius: 15px; margin-top: 2rem;">
+        <h3>🤝 Ways to Connect</h3>
+        <ul>
+          <li><strong>Volunteer:</strong> Join local reforestation projects and conservation efforts</li>
+          <li><strong>Donate:</strong> Support organizations working to protect forests worldwide</li>
+          <li><strong>Educate:</strong> Share our resources with your community and social networks</li>
+          <li><strong>Advocate:</strong> Contact your local representatives about forest protection policies</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p style="color: black;">&copy; 2025 STDC</p>
+    <div class="social-links">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(this);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const subject = formData.get('subject');
+      const message = formData.get('message');
+      
+      // Simple validation
+      if (!name || !email || !message) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+      
+      // Simulate form submission
+      alert('Thank you for your message! We\'ll get back to you soon.');
+      
+      // Reset form
+      this.reset();
+    });
+  </script>
+</body>
+</html>

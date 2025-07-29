@@ -1,0 +1,310 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  line-height: 1.6;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Header styles */
+header {
+  background: linear-gradient(135deg, #2d5016 0%, #5A7739 50%, #7a9c5a 100%);
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: 700;
+  margin-left: 1cm;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+nav ul li {
+  display: block;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 500;
+  background: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover, nav a:focus {
+  background-color: rgba(255,255,255,0.15);
+  color: #fff;
+  outline: none;
+}
+
+/* Main content */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+/* Section styles */
+.intro, .msg, .vision, .mission, .content {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro:hover, .msg:hover, .vision:hover, .mission:hover, .content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+/* Typography */
+h2 {
+  color: #2d5016;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #5A7739, #7a9c5a);
+  border-radius: 2px;
+}
+
+h3 {
+  color: #5A7739;
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem 0;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Banner images */
+.banner, .banner-def, .banner-eff, .banner-cau {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.banner:hover, .banner-def:hover, .banner-eff:hover, .banner-cau:hover {
+  transform: scale(1.02);
+}
+
+/* Lists */
+ul {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+ul li::before {
+  content: '🌱';
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+}
+
+/* Links */
+a {
+  color: #5A7739;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2d5016;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #2d5016 0%, #5A7739 100%);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  nav ul {
+    flex-wrap: wrap;
+    gap: 0.2rem;
+  }
+  main {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  nav ul li {
+    margin-bottom: 0.2rem;
+  }
+  main {
+    padding: 0 0.5rem;
+    margin: 1rem auto;
+  }
+  .intro, .msg, .vision, .mission, .content {
+    padding: 1rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro, .msg, .vision, .mission, .content {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Call to action buttons */
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #5A7739, #7a9c5a);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(90, 119, 57, 0.3);
+  margin: 1rem 0;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(90, 119, 57, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+/* Contact form styles */
+.contact-form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  margin-top: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2d5016;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #5A7739;
+  box-shadow: 0 0 0 3px rgba(90, 119, 57, 0.1);
+}
+
+/* Social media links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
