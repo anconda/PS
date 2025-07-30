@@ -1,10 +1,10 @@
-# STDC - Stop Deforestation Together
+# STDC - Stop Tree Devastation Campaign
 
 A comprehensive educational website dedicated to raising awareness about deforestation, its causes, effects, and solutions. Built with modern HTML, CSS, and JavaScript.
 
 ## 🌱 About
 
-STDC (Stop Deforestation Together) is an educational platform that provides accessible information about deforestation and empowers individuals to take action. The website covers:
+STDC (Stop Tree Devastation Campaign) is an educational platform that provides accessible information about deforestation and empowers individuals to take action. The website covers:
 
 - **What is Deforestation?** - Understanding the basics
 - **Causes** - Major drivers of forest loss
@@ -126,4 +126,4 @@ For questions, suggestions, or collaboration opportunities:
 
 ---
 
-**Together, we can protect our planet's forests for future generations.** 🌱 
+**Together, we can stop tree devastation and protect our planet's forests for future generations.** 🌱 
