@@ -4,16 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>What is Deforestation? - STDC - Stop Tree Devastation Campaign</title>
-  <link rel="stylesheet" href="style.css"/>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Learn what deforestation is, why it matters, and its impact on climate change, biodiversity, and human communities. Understand the urgency of forest conservation.">
+  <meta name="keywords" content="deforestation definition, forest loss, climate change, biodiversity loss, environmental impact, forest conservation">
+  <meta name="author" content="STDC - Stop Tree Devastation Campaign">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="What is Deforestation? - STDC">
+  <meta property="og:description" content="Learn what deforestation is and why it matters for our planet's future.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://stdc-campaign.org/what-is-deforestation.html">
+  <meta property="og:image" content="images/deforestation.jpg">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://stdc-campaign.org/what-is-deforestation.html">
+  
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="images/Green and Beige Classic Elegant Nature Foundation Logo.png">
+  <link rel="apple-touch-icon" href="images/Green and Beige Classic Elegant Nature Foundation Logo.png">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
+  <header role="banner">
     <h1>STDC</h1>
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="what-is-deforestation.html">What is Deforestation?</a></li>
+        <li><a href="what-is-deforestation.html" aria-current="page">What is Deforestation?</a></li>
         <li><a href="causes.html">Causes</a></li>
         <li><a href="effects.html">Effects</a></li>
         <li><a href="solutions.html">Solutions</a></li>
@@ -23,10 +44,10 @@
     </nav>
   </header>
 
-  <main>
-    <section class="content">
-  <h2>What is Deforestation?</h2>
-  <img src="images/deforestation.jpg" alt="Deforestation Banner" class="banner-def" />
+  <main role="main">
+    <section class="content" aria-labelledby="deforestation-heading">
+      <h2 id="deforestation-heading">What is Deforestation?</h2>
+      <img src="images/deforestation.jpg" alt="Aerial view of deforested land showing cleared forest areas and environmental damage" class="banner-def" />
 
   <p><strong>Deforestation</strong> refers to the large-scale removal of forests, often resulting in permanent loss of tree cover to make way for agriculture, urban expansion, mining, or infrastructure. While it can occur naturally through wildfires or disease, the vast majority is driven by human activities.</p>
 
@@ -47,14 +68,15 @@
 </section>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p style="color: black;">&copy; 2025 STDC</p>
-    <div class="social-links">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
+    <div class="social-links" role="navigation" aria-label="Social media links">
+      <a href="#" aria-label="Follow us on Instagram">Instagram</a>
+      <a href="#" aria-label="Follow us on Facebook">Facebook</a>
+      <a href="#" aria-label="Follow us on Twitter">Twitter</a>
     </div>
   </footer>
   <script src="script.js"></script>
+  <script src="dynamic-header.js"></script>
 </body>
 </html>

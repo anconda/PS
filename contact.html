@@ -4,13 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - STDC - Stop Tree Devastation Campaign</title>
-  <link rel="stylesheet" href="style.css"/>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Get in touch with STDC to learn how you can help stop deforestation. Contact us for questions, collaboration, or to join our mission to protect forests.">
+  <meta name="keywords" content="contact STDC, deforestation help, environmental collaboration, forest protection, volunteer opportunities">
+  <meta name="author" content="STDC - Stop Tree Devastation Campaign">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Contact - STDC">
+  <meta property="og:description" content="Get in touch with STDC to learn how you can help stop deforestation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stdc-campaign.org/contact.html">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://stdc-campaign.org/contact.html">
+  
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="images/Green and Beige Classic Elegant Nature Foundation Logo.png">
+  <link rel="apple-touch-icon" href="images/Green and Beige Classic Elegant Nature Foundation Logo.png">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
+  <header role="banner">
     <h1>STDC</h1>
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="what-is-deforestation.html">What is Deforestation?</a></li>
@@ -18,14 +38,14 @@
         <li><a href="effects.html">Effects</a></li>
         <li><a href="solutions.html">Solutions</a></li>
         <li><a href="how-you-can-help.html">How You Can Help</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="content">
-      <h2>Contact Us</h2>
+  <main role="main">
+    <section class="content" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Us</h2>
       <p>We'd love to hear from you! Whether you have a question, want to collaborate, or just want to share your thoughts on deforestation — feel free to reach out. Your voice matters in our mission to protect the world's forests.</p>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
@@ -46,28 +66,33 @@
 
         <div class="contact-form">
           <h3>Send us a Message</h3>
-          <form id="contactForm">
+          <form id="contactForm" role="form" aria-labelledby="contact-heading">
             <div class="form-group">
               <label for="name">Name *</label>
-              <input type="text" id="name" name="name" required>
+              <input type="text" id="name" name="name" required aria-required="true" aria-describedby="name-help">
+              <div id="name-help" class="sr-only">Please enter your full name</div>
             </div>
             
             <div class="form-group">
               <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-help">
+              <div id="email-help" class="sr-only">Please enter a valid email address</div>
             </div>
             
             <div class="form-group">
               <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject">
+              <input type="text" id="subject" name="subject" aria-describedby="subject-help">
+              <div id="subject-help" class="sr-only">Optional: Enter a subject for your message</div>
             </div>
             
             <div class="form-group">
               <label for="message">Message *</label>
-              <textarea id="message" name="message" rows="5" required placeholder="Tell us how you'd like to help or what questions you have about deforestation..."></textarea>
+              <textarea id="message" name="message" rows="5" required aria-required="true" aria-describedby="message-help" placeholder="Tell us how you'd like to help or what questions you have about deforestation..."></textarea>
+              <div id="message-help" class="sr-only">Please provide details about your inquiry or how you'd like to help</div>
             </div>
             
-            <button type="submit" class="cta-button" style="width: 100%;">Send Message</button>
+            <button type="submit" class="cta-button" style="width: 100%;" aria-describedby="submit-help">Send Message</button>
+            <div id="submit-help" class="sr-only">Click to submit your message to STDC</div>
           </form>
         </div>
       </div>
@@ -94,5 +119,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="dynamic-header.js"></script>
 </body>
 </html>

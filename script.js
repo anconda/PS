@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initAnimations();
     initScrollEffects();
     initImageOptimization();
+    initDynamicHeader();
     
     console.log('STDC - Stop Tree Devastation Campaign loaded successfully! 🌱');
 });
@@ -455,6 +456,40 @@ function initImageOptimization() {
     }
 }
 
+// ===== DYNAMIC HEADER FUNCTIONALITY =====
+function initDynamicHeader() {
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+    const scrollThreshold = 100; // Minimum scroll before hiding header
+    
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Only hide/show header if scrolled past threshold
+        if (scrollTop > scrollThreshold) {
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down - hide header
+                header.classList.add('header-hidden');
+            } else {
+                // Scrolling up - show header
+                header.classList.remove('header-hidden');
+            }
+        } else {
+            // Near top of page - always show header
+            header.classList.remove('header-hidden');
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+    
+    // Show header when user hovers near top of screen
+    document.addEventListener('mouseover', function(e) {
+        if (e.clientY < 100) {
+            header.classList.remove('header-hidden');
+        }
+    });
+}
+
 // ===== UTILITY FUNCTIONS =====
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
@@ -517,6 +552,40 @@ function showNotification(message, type = 'info') {
         `;
         document.head.appendChild(style);
     }
+}
+
+// ===== DYNAMIC HEADER FUNCTIONALITY =====
+function initDynamicHeader() {
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+    const scrollThreshold = 100; // Minimum scroll before hiding header
+    
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Only hide/show header if scrolled past threshold
+        if (scrollTop > scrollThreshold) {
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down - hide header
+                header.classList.add('header-hidden');
+            } else {
+                // Scrolling up - show header
+                header.classList.remove('header-hidden');
+            }
+        } else {
+            // Near top of page - always show header
+            header.classList.remove('header-hidden');
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+    
+    // Show header when user hovers near top of screen
+    document.addEventListener('mouseover', function(e) {
+        if (e.clientY < 100) {
+            header.classList.remove('header-hidden');
+        }
+    });
 }
 
 // ===== GLOBAL FUNCTIONS (for backward compatibility) =====
