@@ -1,0 +1,27 @@
+{
+  "name": "STDC - Stop Tree Devastation Campaign",
+  "short_name": "STDC",
+  "description": "Educational platform dedicated to raising awareness about deforestation and empowering individuals to take action",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#5A7739",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/Green and Beige Classic Elegant Nature Foundation Logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/Green and Beige Classic Elegant Nature Foundation Logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "environment", "nature"],
+  "lang": "en",
+  "dir": "ltr"
+} 

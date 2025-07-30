@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollEffects();
     initImageOptimization();
     initDynamicHeader();
+    initServiceWorker();
     
     console.log('STDC - Stop Tree Devastation Campaign loaded successfully! 🌱');
 });
@@ -586,6 +587,21 @@ function initDynamicHeader() {
             header.classList.remove('header-hidden');
         }
     });
+}
+
+// ===== SERVICE WORKER INITIALIZATION =====
+function initServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js')
+                .then(function(registration) {
+                    console.log('STDC: Service Worker registered successfully:', registration.scope);
+                })
+                .catch(function(error) {
+                    console.log('STDC: Service Worker registration failed:', error);
+                });
+        });
+    }
 }
 
 // ===== GLOBAL FUNCTIONS (for backward compatibility) =====
