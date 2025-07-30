@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Language Switcher Test - STDC</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="js/i18n.js"></script>
+</head>
+<body>
+  <header role="banner">
+    <h1>STDC</h1>
+    <nav role="navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main style="margin-top: 100px; padding: 2rem;">
+    <h1>Language Switcher Test</h1>
+    <p>If you can see a language switcher in the top-right corner of the header, it's working!</p>
+    <p>Current language: <span id="current-lang">Loading...</span></p>
+    <button onclick="testLanguageChange()">Test Language Change</button>
+  </main>
+
+  <script>
+    function testLanguageChange() {
+      const currentLang = document.getElementById('current-lang');
+      currentLang.textContent = currentLanguage;
+    }
+    
+    // Show current language after initialization
+    setTimeout(() => {
+      const currentLang = document.getElementById('current-lang');
+      currentLang.textContent = currentLanguage;
+    }, 1000);
+  </script>
+</body>
+</html> 

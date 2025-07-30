@@ -26,72 +26,75 @@
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css"/>
+  
+  <!-- i18n System -->
+  <script src="js/i18n.js"></script>
 </head>
 <body>
   <header role="banner">
     <h1>STDC</h1>
     <nav role="navigation" aria-label="Main navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="what-is-deforestation.html">What is Deforestation?</a></li>
-        <li><a href="causes.html">Causes</a></li>
-        <li><a href="effects.html">Effects</a></li>
-        <li><a href="solutions.html">Solutions</a></li>
-        <li><a href="how-you-can-help.html">How You Can Help</a></li>
-        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="what-is-deforestation.html" data-i18n="nav.what-is">What is Deforestation?</a></li>
+        <li><a href="causes.html" data-i18n="nav.causes">Causes</a></li>
+        <li><a href="effects.html" data-i18n="nav.effects">Effects</a></li>
+        <li><a href="solutions.html" data-i18n="nav.solutions">Solutions</a></li>
+        <li><a href="how-you-can-help.html" data-i18n="nav.help">How You Can Help</a></li>
+        <li><a href="contact.html" aria-current="page" data-i18n="nav.contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main role="main">
     <section class="content" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact Us</h2>
-      <p>We'd love to hear from you! Whether you have a question, want to collaborate, or just want to share your thoughts on deforestation — feel free to reach out. Your voice matters in our mission to protect the world's forests.</p>
+      <h2 id="contact-heading" data-i18n="contact.title">Contact Us</h2>
+      <p data-i18n="contact.intro">We'd love to hear from you! Whether you have a question, want to collaborate, or just want to share your thoughts on deforestation — feel free to reach out. Your voice matters in our mission to protect the world's forests.</p>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
         <div>
-          <h3>Email</h3>
+          <h3 data-i18n="contact.email">Email</h3>
           <p><a href="mailto:STDC@gmail.com">STDC@gmail.com</a></p>
           
-          <h3>Get Involved</h3>
-          <p>Join our community of forest protectors and stay updated with the latest news, events, and opportunities to make a difference.</p>
+          <h3 data-i18n="contact.get-involved">Get Involved</h3>
+          <p data-i18n="contact.get-involved.desc">Join our community of forest protectors and stay updated with the latest news, events, and opportunities to make a difference.</p>
           
-          <h3>Follow Us</h3>
+          <h3 data-i18n="contact.follow">Follow Us</h3>
           <div class="social-links" style="justify-content: flex-start; margin-top: 1rem;">
-            <a href="#" style="background: #E4405F;">Instagram</a>
-            <a href="#" style="background: #1877F2;">Facebook</a>
-            <a href="#" style="background: #1DA1F2;">Twitter</a>
+            <a href="#" style="background: #E4405F;" data-i18n="footer.instagram">Instagram</a>
+            <a href="#" style="background: #1877F2;" data-i18n="footer.facebook">Facebook</a>
+            <a href="#" style="background: #1DA1F2;" data-i18n="footer.twitter">Twitter</a>
           </div>
         </div>
 
         <div class="contact-form">
-          <h3>Send us a Message</h3>
+          <h3 data-i18n="contact.form.title">Send us a Message</h3>
           <form id="contactForm" role="form" aria-labelledby="contact-heading">
             <div class="form-group">
-              <label for="name">Name *</label>
+              <label for="name" data-i18n="contact.form.name">Name *</label>
               <input type="text" id="name" name="name" required aria-required="true" aria-describedby="name-help">
               <div id="name-help" class="sr-only">Please enter your full name</div>
             </div>
             
             <div class="form-group">
-              <label for="email">Email *</label>
+              <label for="email" data-i18n="contact.form.email">Email *</label>
               <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-help">
               <div id="email-help" class="sr-only">Please enter a valid email address</div>
             </div>
             
             <div class="form-group">
-              <label for="subject">Subject</label>
+              <label for="subject" data-i18n="contact.form.subject">Subject</label>
               <input type="text" id="subject" name="subject" aria-describedby="subject-help">
               <div id="subject-help" class="sr-only">Optional: Enter a subject for your message</div>
             </div>
             
             <div class="form-group">
-              <label for="message">Message *</label>
-              <textarea id="message" name="message" rows="5" required aria-required="true" aria-describedby="message-help" placeholder="Tell us how you'd like to help or what questions you have about deforestation..."></textarea>
+              <label for="message" data-i18n="contact.form.message">Message *</label>
+              <textarea id="message" name="message" rows="5" required aria-required="true" aria-describedby="message-help" data-i18n="contact.form.message.placeholder" placeholder="Tell us how you'd like to help or what questions you have about deforestation..."></textarea>
               <div id="message-help" class="sr-only">Please provide details about your inquiry or how you'd like to help</div>
             </div>
             
-            <button type="submit" class="cta-button" style="width: 100%;" aria-describedby="submit-help">Send Message</button>
+            <button type="submit" class="cta-button" style="width: 100%;" aria-describedby="submit-help" data-i18n="contact.form.submit">Send Message</button>
             <div id="submit-help" class="sr-only">Click to submit your message to STDC</div>
           </form>
         </div>
